@@ -42,13 +42,13 @@ from bisect import bisect_left
 
 
 def are_they_equal(array_a, array_b):
-    outcome = "False"
+    outcome = False
   
     for i in array_a:  #O(n)
         if i in array_b: #O(n**2)
-            outcome = "True"
+            outcome = True
         else:
-            outcome = "False"
+            outcome = False
     return outcome
       
       
@@ -77,9 +77,9 @@ def check(expected, output):
   rightTick = '\u2713'
   wrongTick = '\u2717'
   if result:
-    print(rightTick, 'Test #', test_case_number, sep='')
+    print(rightTick, 'YES Test #', test_case_number, sep='')
   else:
-    print(wrongTick, 'Test #', test_case_number, ': Expected ', sep='', end='')
+    print(wrongTick, 'NO Test #', test_case_number, ': Expected ', sep='', end='')
     printString(expected)
     print(' Your output: ', end='')
     printString(output)
