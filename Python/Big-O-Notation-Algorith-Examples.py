@@ -17,7 +17,7 @@ print("--- O(1) CONSTANT ---")
 func_constant([1,2,3])
 
 """
-O(1) VERSION 2
+O(1) CONSTANT TIME V2
 """
 def func_constant2(a, b):
     if a > b:
@@ -29,7 +29,7 @@ def func_constant2(a, b):
 func_constant2(5,3)
 
 """
-O(n) LINEAR TIME
+-------------- O(n) LINEAR TIME -----------------
 """
 
 def func_lin(lst):
@@ -40,7 +40,23 @@ print("--- O(n) LINEAR ---")
 func_lin([1,2,3])
 
 """
-O(log n) LOGARITHMIC TIME
+O(n) LINEAR TIME ----- V2
+"""
+def linear_search(data, value):
+    for index in range(len(data)):
+        if value == data[index]:
+            return index
+    raise ValueError('Value not found in the list')
+
+data = [1, 2, 9, 8, 3, 4, 7, 6, 5]
+print("--- O(n) LINEAR TIME V2 ---")
+print(linear_search(data, 7))
+
+
+
+
+"""
+------------------ O(log n) LOGARITHMIC TIME -------------
 """
 def binary_search(data, value):
     n = len(data)
