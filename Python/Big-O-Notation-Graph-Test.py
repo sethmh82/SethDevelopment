@@ -21,6 +21,9 @@ plt.ylim(0,50)
 
 for i in range(len(big_o)):
     plt.plot(n,big_o[i], label=labels[i])
+    print("... ... .. .... ......")
+    print("... ...", labels[i], " .. .... ......")
+    print("... ... .. .... ......")
     
 plt.legend(loc=0)
 plt.ylabel('Relative Runtime')
