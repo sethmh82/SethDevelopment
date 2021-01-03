@@ -23,7 +23,7 @@ def reconstructPath(s, e, prev):
     path = []
     
     # loop backwards from the end node until we get to the start
-    for(at = e; at != null; at = prev[at]):
+    for (at = e; at != null; at = prev[at]):
         path.add(at)
     
     #since we started at the end we need to reverse the nodes
@@ -59,3 +59,7 @@ def solve(s):
                 visited[next] = true
                 prev[next] = node
     return prev
+
+
+
+print(solve(s))
