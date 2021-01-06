@@ -6,7 +6,7 @@ Created on Mon Jan  4 15:58:19 2021
 """
 
 import numpy as np
-def levenshtein_ratio_and_distance(s, t, ratio_calc = False):
+def levenshtein(s, t, ratio_calc = False):
     """ levenshtein_ratio_and_distance:
         Calculates levenshtein distance between two strings.
         If ratio_calc = True, the function computes the
@@ -46,16 +46,16 @@ def levenshtein_ratio_and_distance(s, t, ratio_calc = False):
         Ratio = ((len(s)+len(t)) - distance[row][col]) / (len(s)+len(t))
         return Ratio
     else:
-        # print(distance) # Uncomment if you want to see the matrix showing how the algorithm computes the cost of deletions,
+        print(distance) # Uncomment if you want to see the matrix showing how the algorithm computes the cost of deletions,
         # insertions and/or substitutions
         # This is the minimum number of edits needed to convert string a to string b
         return "The strings are {} edits away".format(distance[row][col])
     
     
     
-Str1 = "Apple Inc."
-Str2 = "apple Inc"
-Distance = levenshtein_ratio_and_distance(Str1,Str2)
+Str1 = "AppsfsdafdasfleIndfgsdgfgceej"
+Str2 = "acpssafadsfasleIncdsgfggfsdfy"
+Distance = levenshtein(Str1,Str2)
 print(Distance)
-Ratio = levenshtein_ratio_and_distance(Str1,Str2,ratio_calc = True)
+Ratio = levenshtein(Str1,Str2,ratio_calc = True)
 print(Ratio)
