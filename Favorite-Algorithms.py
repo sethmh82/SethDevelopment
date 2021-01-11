@@ -5,6 +5,10 @@ Created on Thu Jan  7 08:54:06 2021
 @author: SethHarden
 """
 
+
+#avg(max(x2,y5), min(x3,y6))
+
+
 class Solution:
     def lengthOfLongestSubstring(self, letters: str) -> int:
         
