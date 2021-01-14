@@ -4,7 +4,91 @@ Created on Wed Jan 13 12:53:34 2021
 
 @author: SethHarden
 """
+class Mammal(object):
+  def __init__(self, mammalName):
+    print(mammalName, 'is a warm-blooded animal.')
+    
+class Dog(Mammal):
+  def __init__(self):
+    print('Dog has four legs.')
+    
+    super().__init__('Dog')
+    
+d1 = Dog()
 
+
+
+'''
+# ZIP TUPLES
+numbersList = [1, 2, 3]
+str_list = ['one', 'two']
+numbers_tuple = ('ONE', 'TWO', 'THREE', 'FOUR')
+
+# Notice, the size of numbersList and numbers_tuple is different
+result = zip(numbersList, numbers_tuple)
+
+# Converting to set
+result_set = set(result)
+print(result_set)
+
+result = zip(numbersList, str_list, numbers_tuple)
+
+# Converting to set
+result_set = set(result)
+print(result_set)
+
+
+print("-------------------------------------------------------------")
+
+
+x = 7
+y = 3
+z = 5
+
+print(pow(x, y, z))
+
+
+
+
+square = {2: 4, -3: 9, -1: 1, -2: 4}
+
+# the largest key
+key1 = max(square)
+print("The largest key:", key1)    # 2
+
+# the key whose value is the largest
+key2 = max(square, key = lambda k: square[k])
+
+print("The key with the largest value:", key2)    # -3
+
+# getting the largest value
+print("The largest value:", square[key2])    # 9
+
+
+
+
+# FILTER 
+letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
+
+# function that filters vowels
+def filterVowels(letter):
+    vowels = ['a', 'e', 'i', 'o', 'u']
+
+    if(letter in vowels):
+        return True
+    else:
+        return False
+
+filteredVowels = filter(filterVowels, letters)
+
+print('The filtered vowels are:')
+for vowel in filteredVowels:
+    print(vowel)
+    
+    
+'''
+
+'''
 # ENUMERATE 
 
 grocery = ['bread', 'milk', 'butter']
@@ -17,6 +101,7 @@ print(list(enumerateGrocery))
 # changing the default counter
 enumerateGrocery = enumerate(grocery, 5)
 print(list(enumerateGrocery))
+'''
 
 '''
 number = [1, 2, 3]
