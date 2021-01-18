@@ -5,7 +5,7 @@ Created on Wed Jan 13 20:25:00 2021
 @author: SethHarden
 
 
-
+"""
 #LISTS
 my_list = [10,20,30,40,50]
 for i in my_list:
@@ -32,49 +32,48 @@ my_list = [1,2,3,4,5,6,7,8,9,10]
 # Give me each number in a list squared
 squares = [num*num for num in my_list]
 print(squares)
-"""
-#GENERATORS
 
 
 
    
-# FIZZBUZZ
+FIZZBUZZ
 
-# for num in range(1,101):
-#     if num % 5 == 0 and num % 3 == 0:
-#         print("FizzBuzz")
-#     elif num % 3 == 0:
-#         print("Fizz")
-#     elif num % 5 == 0:
-#         print("Buzz")
-#     else:
-#         print(num)
+for num in range(1,101):
+    if num % 5 == 0 and num % 3 == 0:
+        print("FizzBuzz")
+    elif num % 3 == 0:
+        print("Fizz")
+    elif num % 5 == 0:
+        print("Buzz")
+    else:
+        print(num)
 
      
-# FIBONACCI GENERATOR SEQUENCE  
+FIBONACCI GENERATOR SEQUENCE  
 
-# def fib(num): 
-#     a, b = 0,1
-#     for i in range(0, num, 1):
-#         yield "{}: {}".format(i+1, a)
-#         a, b = b, a + b
+def fib(num): 
+    a, b = 0,1
+    for i in range(0, num, 1):
+        yield "{}: {}".format(i+1, a)
+        a, b = b, a + b
         
-# for item in fib(20):
-#     print(item)
-        
-        
+for item in fib(20):
+    print(item)
         
         
-# FIBONACCI NORMAL SEQUENCE        
-# def fib(num): 
-#     a, b = 0,1       
-#     for i in range(0,num):
-#         print(a)
-#         a, b = b, a+b
+        
+        
+FIBONACCI NORMAL SEQUENCE        
+def fib(num): 
+    a, b = 0,1       
+    for i in range(0,num):
+        print(a)
+        a, b = b, a+b
         
      
-# fib(100)
+fib(100)
 
+from guppy import hpy
 
 
 #CLASSES
@@ -83,7 +82,7 @@ class Person(object):
         self.name = name
     
     def reveal_identity(self):
-        print ("My name is {}".format(self.name))
+        print("My name is {}".format(self.name))
 
 
 class SuperHero(Person):
@@ -99,21 +98,16 @@ class SuperHero(Person):
 
 
 
-name = Person("seth")
+name = Person("a")
 #Person.reveal_identity(name)
 
-hero = SuperHero(name, "batman")
-SuperHero.reveal_identity(hero)
+hero = SuperHero(name, "b")
+test = SuperHero.reveal_identity(hero)
+test2 = Person.reveal_identity(hero)
 
 
-Return Type (what we are returning)
-Memory 
-Operation Usage
-Speed
-
-
-
-
+h = hpy(test2)
+print(h.heap())
 
 
 
