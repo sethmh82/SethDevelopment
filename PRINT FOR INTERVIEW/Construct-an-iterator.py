@@ -22,11 +22,12 @@ class MyRange:
         return current
     
     
-def my_range(start, end):
+def my_range(start):
     current = start
-    while current < end:
-        yield current
-        current += 1
+    while True:
+        while current < end:
+            yield current
+            current += 1
         
         
 nums = my_range(1, 5)

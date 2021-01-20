@@ -1,15 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jan  7 08:54:06 2021
-
-@author: SethHarden
-"""
-
-
-#avg(max(x2,y5), min(x3,y6))
-
-
-class Solution:
+#LENGTH OF LONGEST SUBSTRING
     def lengthOfLongestSubstring(self, letters: str) -> int:
         
         #assign total length of letters
@@ -27,8 +16,6 @@ class Solution:
             
             if letters[letter] in value_index:
                 
-                # max() returns the greater number
-                # index is assigned either the index store for that letter or the current one
                 index = max(value_index[letters[letter]], index)
 
                 
@@ -39,6 +26,7 @@ class Solution:
         return answer
     
 if __name__ == "__main__":
+    
     s = "eabcabcbbne"
     sol = Solution()
     print(sol.lengthOfLongestSubstring(s))

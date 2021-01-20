@@ -20,9 +20,5 @@ Number of Islands | DFS | BFS | Union Find | O(M x N) M=Rows N=Columns
 
 
 
----------HARD-------------
-Consecutive Number Sums | 
-Trapping Rain Water | Brute Force O(n**2) | Stacks | Two Pointers
-
 
 """
